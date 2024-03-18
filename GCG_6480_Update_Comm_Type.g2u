@@ -1,0 +1,578 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Commission..Create(BaseForm)
+Gui.F_Commission..Caption("SOP Date and Comm. Type")
+Gui.F_Commission..Size(220,110)
+Gui.F_Commission..MinX(0)
+Gui.F_Commission..MinY(0)
+Gui.F_Commission..Position(0,0)
+Gui.F_Commission..AlwaysOnTop(False)
+Gui.F_Commission..FontName("Tahoma")
+Gui.F_Commission..FontSize(8.25)
+Gui.F_Commission..ControlBox(True)
+Gui.F_Commission..MaxButton(True)
+Gui.F_Commission..MinButton(True)
+Gui.F_Commission..MousePointer(0)
+Gui.F_Commission..Moveable(True)
+Gui.F_Commission..Sizeable(False)
+Gui.F_Commission..ShowInTaskBar(True)
+Gui.F_Commission..TitleBar(True)
+Gui.F_Commission..Event(UnLoad,F_Commission_UnLoad)
+Gui.F_Commission.lbl1.Create(Label,"SOP Date",True,46,13,0,11,9,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Commission.lbl1.BorderStyle(0)
+Gui.F_Commission.dtpSOPDate.Create(DatePicker)
+Gui.F_Commission.dtpSOPDate.Enabled(True)
+Gui.F_Commission.dtpSOPDate.Visible(True)
+Gui.F_Commission.dtpSOPDate.Zorder(0)
+Gui.F_Commission.dtpSOPDate.Size(100,20)
+Gui.F_Commission.dtpSOPDate.Position(114,5)
+Gui.F_Commission.dtpSOPDate.CheckBox(False)
+Gui.F_Commission.dtpSOPDate.FontName("Tahoma")
+Gui.F_Commission.dtpSOPDate.FontSize(8.25)
+Gui.F_Commission.lbl2.Create(Label,"Commission Type",True,82,13,0,8,60,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Commission.lbl2.BorderStyle(0)
+Gui.F_Commission.txtCommType.Create(TextBox,"",True,100,20,0,114,56,True,0,"Tahoma",8.25,,1)
+Gui.F_Commission.chkSOPConf.Create(CheckBox)
+Gui.F_Commission.chkSOPConf.Enabled(True)
+Gui.F_Commission.chkSOPConf.Visible(True)
+Gui.F_Commission.chkSOPConf.Zorder(0)
+Gui.F_Commission.chkSOPConf.Size(26,20)
+Gui.F_Commission.chkSOPConf.Position(113,31)
+Gui.F_Commission.chkSOPConf.Caption("")
+Gui.F_Commission.chkSOPConf.FontName("Tahoma")
+Gui.F_Commission.chkSOPConf.FontSize(9)
+Gui.F_Commission.lbl3.Create(Label,"SOP Date confirm",True,84,13,0,10,35,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Commission.lbl3.BorderStyle(0)
+Gui.F_SP_Comm_Rate..Create(BaseForm)
+Gui.F_SP_Comm_Rate..Caption("Commission rate per salesperson")
+Gui.F_SP_Comm_Rate..Size(762,577)
+Gui.F_SP_Comm_Rate..MinX(0)
+Gui.F_SP_Comm_Rate..MinY(0)
+Gui.F_SP_Comm_Rate..Position(0,0)
+Gui.F_SP_Comm_Rate..AlwaysOnTop(False)
+Gui.F_SP_Comm_Rate..FontName("Tahoma")
+Gui.F_SP_Comm_Rate..FontSize(8.25)
+Gui.F_SP_Comm_Rate..ControlBox(True)
+Gui.F_SP_Comm_Rate..MaxButton(True)
+Gui.F_SP_Comm_Rate..MinButton(True)
+Gui.F_SP_Comm_Rate..MousePointer(0)
+Gui.F_SP_Comm_Rate..Moveable(True)
+Gui.F_SP_Comm_Rate..Sizeable(True)
+Gui.F_SP_Comm_Rate..ShowInTaskBar(True)
+Gui.F_SP_Comm_Rate..TitleBar(True)
+Gui.F_SP_Comm_Rate..Event(UnLoad,F_SP_Comm_Rate_UnLoad)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Create(GsGridControl)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Enabled(True)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Visible(True)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Zorder(0)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Size(752,535)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Position(5,8)
+Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.Anchor(15)
+Gui.F_Date_Order_Hist..Create(BaseForm)
+Gui.F_Date_Order_Hist..Caption("Invoices date range")
+Gui.F_Date_Order_Hist..Size(272,110)
+Gui.F_Date_Order_Hist..MinX(0)
+Gui.F_Date_Order_Hist..MinY(0)
+Gui.F_Date_Order_Hist..Position(0,0)
+Gui.F_Date_Order_Hist..AlwaysOnTop(False)
+Gui.F_Date_Order_Hist..FontName("Tahoma")
+Gui.F_Date_Order_Hist..FontSize(8.25)
+Gui.F_Date_Order_Hist..ControlBox(True)
+Gui.F_Date_Order_Hist..MaxButton(True)
+Gui.F_Date_Order_Hist..MinButton(True)
+Gui.F_Date_Order_Hist..MousePointer(0)
+Gui.F_Date_Order_Hist..Moveable(True)
+Gui.F_Date_Order_Hist..Sizeable(True)
+Gui.F_Date_Order_Hist..ShowInTaskBar(True)
+Gui.F_Date_Order_Hist..TitleBar(True)
+Gui.F_Date_Order_Hist..Event(UnLoad,F_Date_Order_Hist_UnLoad)
+Gui.F_Date_Order_Hist.lbl1.Create(Label,"From",True,24,13,0,11,7,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Date_Order_Hist.lbl1.BorderStyle(0)
+Gui.F_Date_Order_Hist.lbl1.DefaultValue("From")
+Gui.F_Date_Order_Hist.dtp_From.Create(DatePicker)
+Gui.F_Date_Order_Hist.dtp_From.Enabled(True)
+Gui.F_Date_Order_Hist.dtp_From.Visible(True)
+Gui.F_Date_Order_Hist.dtp_From.Zorder(0)
+Gui.F_Date_Order_Hist.dtp_From.Size(101,20)
+Gui.F_Date_Order_Hist.dtp_From.Position(11,24)
+Gui.F_Date_Order_Hist.dtp_From.CheckBox(False)
+Gui.F_Date_Order_Hist.dtp_From.FontName("Tahoma")
+Gui.F_Date_Order_Hist.dtp_From.FontSize(8.25)
+Gui.F_Date_Order_Hist.lbl2.Create(Label,"To",True,12,13,0,151,5,True,0,"Tahoma",8.25,,0,0)
+Gui.F_Date_Order_Hist.lbl2.BorderStyle(0)
+Gui.F_Date_Order_Hist.dtp_To.Create(DatePicker)
+Gui.F_Date_Order_Hist.dtp_To.Enabled(True)
+Gui.F_Date_Order_Hist.dtp_To.Visible(True)
+Gui.F_Date_Order_Hist.dtp_To.Zorder(0)
+Gui.F_Date_Order_Hist.dtp_To.Size(100,20)
+Gui.F_Date_Order_Hist.dtp_To.Position(151,23)
+Gui.F_Date_Order_Hist.dtp_To.CheckBox(False)
+Gui.F_Date_Order_Hist.dtp_To.FontName("Tahoma")
+Gui.F_Date_Order_Hist.dtp_To.FontSize(8.25)
+Gui.F_Date_Order_Hist.cmd_Process.Create(Button)
+Gui.F_Date_Order_Hist.cmd_Process.Enabled(True)
+Gui.F_Date_Order_Hist.cmd_Process.Visible(True)
+Gui.F_Date_Order_Hist.cmd_Process.Zorder(0)
+Gui.F_Date_Order_Hist.cmd_Process.Size(75,23)
+Gui.F_Date_Order_Hist.cmd_Process.Position(11,53)
+Gui.F_Date_Order_Hist.cmd_Process.Caption("Process")
+Gui.F_Date_Order_Hist.cmd_Process.FontName("Tahoma")
+Gui.F_Date_Order_Hist.cmd_Process.FontSize(8.25)
+Gui.F_Date_Order_Hist.cmd_Process.Event(Click,cmd_Process_Click)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sPart.Declare
+
+Program.Sub.Preflight.End
+Program.Sub.Main.Start
+Function.Intrinsic.UI.UsePixels ' Allows you to use Pixels instead of Twips throughout
+'Customer: DEWYS MANUFACTURING, INC
+'Call ref.: DEW020-81220210902-0
+'Bryan Pham - 09/08/2021
+'Update commisstion type on ORDER_HIST_LINE
+F.Intrinsic.Control.Try
+V.Local.sError.Declare	
+v.Local.sPart.Declare
+v.Local.dSopDate.Declare
+v.Local.sSQL.Declare
+v.local.sRet.Declare
+v.Local.sCommType.Declare
+v.Local.sExCommType.Declare
+v.Local.iDateDiff.Declare
+v.Local.iCnt.Declare
+v.Local.sSalesPerson.Declare
+v.Local.iYear.Declare(Float)
+v.Local.iComm.Declare(float)
+V.Local.dStartOfMonth.Declare
+V.Local.dEndOfMonth.Declare
+
+f.ODBC.Connection!Con.OpenCompanyConnection
+f.Intrinsic.Control.If(v.Caller.Hook,=,"10120")
+	v.Passed.000068.Set("Commission")
+f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,"10210")
+	v.Global.sPart.Set(v.Passed.000007)
+	f.Intrinsic.String.Build("Select SOP_DATE,COMM_TYPE,SOP_CONF from GCG_6480_SOPDATE_COMMTYPE where PART = '{0}'",v.Global.sPart,v.Local.sSQL)
+	f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL,v.local.sRet)
+	
+	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,True)
+		v.Local.dSopDate.Set("01/01/1900")
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+		v.Local.dSopDate.Set(v.Local.sRet(0))
+		v.Local.sCommType.Set(v.Local.sRet(1))
+	
+	f.Intrinsic.Control.EndIf
+	gui.F_Commission.txtCommType.Text(v.Local.sCommType)
+	f.Intrinsic.Control.If(v.Local.sRet(2),<>,"OOB")
+		gui.F_Commission.chkSOPConf.Value(v.Local.sRet(2))
+	f.Intrinsic.Control.Else
+		gui.F_Commission.chkSOPConf.Value(0)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Local.dSopDate,<>,"")
+		gui.F_Commission.dtpSOPDate.Value(v.Local.dSopDate)
+	f.Intrinsic.Control.Else
+		gui.F_Commission.dtpSOPDate.Value("01/01/1900")
+	f.Intrinsic.Control.EndIf
+	gui.F_Commission..show
+	f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.ElseIf(v.Caller.Switches,=,"D")
+
+	f.Intrinsic.Control.CallSub("setContextMenu")
+	f.Intrinsic.Control.CallSub("cmd_Refresh")
+	gui.F_SP_Comm_Rate..Show
+'run below part from a menu item
+f.Intrinsic.Control.Else
+	F.Intrinsic.Date.DateAdd("M",-1,V.Ambient.Date,V.Local.dStartOfMonth)
+	F.Intrinsic.Date.EndOfMonth(V.Local.dStartOfMonth,V.Local.dEndOfMonth)
+	F.Intrinsic.Date.BeginningOfMonth(V.Local.dStartOfMonth,V.Local.dStartOfMonth)
+	
+	Gui.F_Date_Order_Hist.dtp_From.Value(V.Local.dStartOfMonth)
+	Gui.F_Date_Order_Hist.dtp_To.Value(V.Local.dEndOfMonth)
+	gui.F_Date_Order_Hist..Show
+f.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.F_Commission_UnLoad.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+v.Local.sSQL.Declare
+v.Local.sRet.Declare
+v.Local.sCommType.Declare
+v.Local.dSOPDate.Declare
+v.Local.sSOPConf.Declare
+
+v.Local.sCommType.Set(v.Screen.F_Commission!txtCommType.Text)
+v.Local.dSOPDate.Set(v.Screen.F_Commission!dtpSOPDate.Text)
+
+f.Intrinsic.Control.If(v.Screen.F_Commission!chkSOPConf.Value,=,1)
+	v.Local.sSOPConf.Set("1")
+f.Intrinsic.Control.Else
+	v.Local.sSOPConf.Set("0")
+f.Intrinsic.Control.EndIf
+f.ODBC.Connection!Con.OpenCompanyConnection
+f.Intrinsic.String.Build("Select * from GCG_6480_SOPDATE_COMMTYPE where PART = '{0}'",v.Global.sPart,v.Local.sSQL)
+f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,True)
+	f.Intrinsic.String.Build("Insert into GCG_6480_SOPDATE_COMMTYPE(PART,SOP_DATE,COMM_TYPE,SOP_CONF) values('{0}','{1}','{2}',{3})",v.Global.sPart,v.Local.dSOPDate.PervasiveDate,v.Local.sCommType,v.Local.sSOPConf,v.Local.sSQL)
+f.Intrinsic.Control.Else
+	f.Intrinsic.String.Build("Update GCG_6480_SOPDATE_COMMTYPE set SOP_DATE = '{0}', COMM_TYPE = '{1}',SOP_CONF = {2} where PART = '{3}'",v.Local.dSOPDate.PervasiveDate,v.Local.sCommType,v.Local.sSOPConf,v.Global.sPart,v.Local.sSQL)
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+f.ODBC.Connection!Con.Close
+f.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub("Unload")
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Commission_UnLoad.End
+
+Program.Sub.Unload.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+
+	F.Intrinsic.Control.If(V.ODBC.con.State,=,1)
+		F.ODBC.Connection!con.close
+	F.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.End
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Subroutine called from:{6}{1}Error Occurred: {3}{1}Description: {4}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,v.Ambient.SubroutineCalledFrom,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End	
+F.Intrinsic.Control.EndTry
+Program.Sub.Unload.End
+
+Program.Sub.F_SP_Comm_Rate_UnLoad.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+
+	gui.F_SP_Comm_Rate..Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Subroutine called from:{6}{1}Error Occurred: {3}{1}Description: {4}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,v.Ambient.SubroutineCalledFrom,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End	
+F.Intrinsic.Control.EndTry
+Program.Sub.F_SP_Comm_Rate_UnLoad.End
+
+Program.Sub.loadGV_SP_Comm_Type.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+	gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.AddGridviewFromDatatable("gvSP_Comm_Rate","dtSalesPerson")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SuspendLayout()
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","Caption","Salesperson ID")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","AllowEdit","False")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","MinWidth","80")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","HeaderFontBold","True")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","HeaderHAlignment","Center")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SALESPERSON","CellHAlignment","Center")
+	
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SP_NAME","Caption","Salesperson Name")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SP_NAME","AllowEdit","False")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SP_NAME","MinWidth","120")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SP_NAME","HeaderFontBold","True")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","SP_NAME","HeaderHAlignment","Center")
+	
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","Caption","Product Line")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","AllowEdit","False")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","MinWidth","80")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","HeaderFontBold","True")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","HeaderHAlignment","Center")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","PRODUCT_LINE","CellHAlignment","Center")
+	
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","Caption","Commission Type")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","AllowEdit","False")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","MinWidth","80")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","HeaderFontBold","True")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","HeaderHAlignment","Center")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_TYPE","CellHAlignment","Center")
+	
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","Caption","Commission Rate")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","AllowEdit","False")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","MinWidth","80")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","HeaderFontBold","True")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","HeaderHAlignment","Center")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","CellHAlignment","Center")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.SetColumnProperty("gvSP_Comm_Rate","COMMISSION_RATE","DisplayCustomNumeric","#.00%")
+
+	
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.ResumeLayout()
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.MainView("gvSP_Comm_Rate")
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Subroutine called from:{6}{1}Error Occurred: {3}{1}Description: {4}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,v.Ambient.SubroutineCalledFrom,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End	
+F.Intrinsic.Control.EndTry
+Program.Sub.loadGV_SP_Comm_Type.End
+
+Program.Sub.cmd_Refresh.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+	v.Local.sSQL.Declare
+	f.Intrinsic.Control.If(v.DataTable.dtSalesPerson.Exists,=,true)
+		f.Data.Datatable.Close("dtSalesPerson")
+	f.Intrinsic.Control.EndIf
+	v.Local.sSQL.Set("Select A.SALESPERSON, RTRIM(B.SALESPERSON )as SP_NAME,A.PRODUCT_LINE, A.COMMISSION_TYPE,A.COMMISSION_RATE FROM V_COMMISSION_RATE A LEFT JOIN V_SALESPEOPLE B ON A.SALESPERSON = B.SALESPERSON_CODE order by A.SALESPERSON")
+	F.Data.Datatable.CreateFromSQL("dtSalesPerson","con",v.Local.sSQL,true)
+	f.Intrinsic.Control.CallSub("loadGV_SP_Comm_Type")
+	
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Subroutine called from:{6}{1}Error Occurred: {3}{1}Description: {4}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,v.Ambient.SubroutineCalledFrom,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End	
+F.Intrinsic.Control.EndTry
+Program.Sub.cmd_Refresh.End
+
+Program.Sub.setContextMenu.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.bRet.Declare
+	
+	Gui.F_SP_Comm_Rate..ContextMenuCreate("ctxAll")
+	Gui.F_SP_Comm_Rate.GSGC_SP_Comm_Rate.ContextMenuAttach("ctxAll")
+	Gui.F_SP_Comm_Rate..ContextMenuAddItem("ctxAll","Refresh",0,"Refresh")
+	Gui.F_SP_Comm_Rate..ContextMenuSetItemEventHandler("ctxAll","Refresh","cmd_Refresh")	
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.setContextMenu.End
+
+Program.Sub.F_Date_Order_Hist_UnLoad.Start
+f.Intrinsic.Control.Try
+	v.Local.sError.Declare
+
+	gui.F_Date_Order_Hist..Visible(False)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}Subroutine: {2}{1}Subroutine called from:{6}{1}Error Occurred: {3}{1}Description: {4}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,v.Ambient.SubroutineCalledFrom,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End	
+F.Intrinsic.Control.EndTry
+Program.Sub.F_Date_Order_Hist_UnLoad.End
+
+Program.Sub.cmd_Process_Click.Start
+	F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	v.Local.sSQL.Declare
+	v.Local.iCnt.Declare
+	v.Local.sRet.Declare
+	v.Local.dSopDate.Declare
+	v.Local.sExCommType.Declare
+	v.Local.sCommType.Declare
+	v.Local.iDateDiff.Declare
+	v.Local.iYear.Declare(Float)
+	v.Local.iComm.Declare(Float)
+	v.Local.dFrom.Declare
+	v.Local.dTo.Declare
+	v.Local.sPart.Declare
+	
+	v.Local.dFrom.Set(v.Screen.F_Date_Order_Hist!dtp_From.Text)
+	v.Local.dTo.Set(v.Screen.F_Date_Order_Hist!dtp_To.Text)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtOrdHistLines.Exists,=,true)
+		f.Data.Datatable.Close("dtOrdHistLines")
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.UI.InvokeWaitDialog("Please wait...")
+
+	f.Intrinsic.String.Build("Select * from V_ORDER_HIST_LINE where INVOICE in (Select INVOICE from V_AR_OPEN_ITEMS where (DATE_TRANSACTION between '{0}' and '{1}') and BATCH_CODE = 11) order by CUSTOMER;",v.Local.dFrom.PervasiveDate,v.Local.dTo.PervasiveDate,v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtOrdHistLines","con",v.Local.sSQL,true)
+
+
+	f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.dtOrdHistLines.RowCount--,1)
+	f.Intrinsic.UI.ChangeWaitStatus("Updating commission type",v.Local.iCnt,1,v.DataTable.dtOrdHistLines.RowCount--)
+'check if sales person is JHB
+
+		v.Local.sPart.Set(v.DataTable.dtOrdHistLines(v.Local.iCnt).PART!FieldValTrim)
+		f.Intrinsic.String.Left(v.Local.sPart,17,v.Local.sPart)
+		f.Intrinsic.Control.If(v.DataTable.dtOrdHistLines(v.Local.iCnt).SALESPERSON!FieldValTrim,=,"JHB")
+
+			'check if part is confirmed for use of SOP Date
+			f.Intrinsic.String.Build("Select SOP_CONF from GCG_6480_SOPDATE_COMMTYPE where PART = '{0}'",v.Local.sPart,v.Local.sSQL)
+			f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+			'if part is confirmed for use of SOP date
+			f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+			f.Intrinsic.Control.If(v.Local.sRet(0),=,True)
+				'pull SoP date and exception commission type from custom table	
+				f.Intrinsic.String.Build("Select SOP_DATE from GCG_6480_SOPDATE_COMMTYPE where PART = '{0}'",v.Local.sPart,v.Local.sSQL)
+				f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.sRet)
+				f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+					f.Intrinsic.String.Split(v.Local.sRet,"#$#",v.Local.sRet)
+					v.Local.dSopDate.Set(v.Local.sRet(0))
+				f.Intrinsic.Control.EndIf
+				'if there is no exception commission for this part, get the commission plan of this salesperson		
+'				f.Intrinsic.Control.If(v.Local.sExCommType,=,"")
+					f.Intrinsic.String.Build("Select COMMISSION_TYPE from V_COMMISSION_RATE where SALESPERSON = '{0}'",v.DataTable.dtOrdHistLines(v.Local.iCnt).SALESPERSON!FieldValTrim,v.Local.sSQL)
+					f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.sCommType)
+				'get the plan of this salesperson
+					f.Intrinsic.String.Split(v.Local.sCommType,"PLAN",v.Local.sCommType)
+					f.Intrinsic.String.Left(v.Local.sCommType(1),1,v.Local.sCommType)
+
+				f.Intrinsic.Control.If(v.Local.sCommType,<>,"")
+				
+					'calculating year of service of this part		
+					f.Intrinsic.Date.DateDiff("d",v.Local.dSopDate,v.DataTable.dtOrdHistLines(v.Local.iCnt).DATE_ORDER!FieldVal,v.Local.iDateDiff)
+					f.Intrinsic.Control.If(v.Local.iDateDiff,>,0)
+						f.Intrinsic.Math.Div(v.Local.iDateDiff,365,v.Local.iYear)
+						F.Intrinsic.Math.Ceiling(v.Local.iYear,v.Local.iYear)
+					f.Intrinsic.Control.Else
+						v.Local.iYear.Set(1)
+					f.Intrinsic.Control.EndIf
+					
+					'build commission type and update ORDER_HIST_LINE table
+					f.Intrinsic.String.Build("{0}{1}",v.Local.sCommType,v.Local.iYear,v.Local.sCommType)
+					f.Intrinsic.String.Build("Update ORDER_HIST_LINE set COMMISSION_TYPE = '{0}' where ORDER_NO = '{1}' and ORDER_LINE = '{2}' and INVOICE = '{3}'",v.Local.sCommType,v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_NO!FieldValTrim, v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_LINE!FieldValTrim,v.DataTable.dtOrdHistLines(v.Local.iCnt).INVOICE!FieldValTrim,v.Local.sSQL)
+					f.ODBC.Connection!con.Execute(v.Local.sSQL)
+				f.Intrinsic.Control.EndIf
+			f.Intrinsic.Control.Else
+				f.Intrinsic.String.Build("Select COMMISSION_TYPE from V_COMMISSION_RATE where SALESPERSON = '{0}'",v.DataTable.dtOrdHistLines(v.Local.iCnt).SALESPERSON!FieldValTrim,v.Local.sSQL)
+				f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.sCommType)
+				'get the plan of this salesperson
+				f.Intrinsic.String.Split(v.Local.sCommType,"PLAN",v.Local.sCommType)
+				f.Intrinsic.String.Left(v.Local.sCommType(1),1,v.Local.sCommType)
+				f.Intrinsic.String.Build("PLAN{0}",v.Local.sCommType,v.Local.sCommType)
+				f.Intrinsic.String.Build("Update ORDER_HIST_LINE set COMMISSION_TYPE = '{0}' where ORDER_NO = '{1}' and ORDER_LINE = '{2}' and INVOICE = '{3}'",v.Local.sCommType,v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_NO!FieldValTrim, v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_LINE!FieldValTrim,v.DataTable.dtOrdHistLines(v.Local.iCnt).INVOICE!FieldValTrim,v.Local.sSQL)
+					f.ODBC.Connection!con.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.EndIf
+'if sales person is not JHB
+		f.Intrinsic.Control.Else
+		
+			f.Intrinsic.String.Build("Select COMM_TYPE from GCG_6480_SOPDATE_COMMTYPE where PART = '{0}'",v.Local.sPart,v.Local.sSQL)
+			f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.sCommType)
+			f.Intrinsic.String.Build("Select COMMISSION_RATE from V_COMMISSION_RATE where SALESPERSON = '{0}' and COMMISSION_TYPE = '{1}'",v.DataTable.dtOrdHistLines(v.Local.iCnt).SALESPERSON!FieldValTrim,v.Local.sCommType,v.Local.sSQL)
+			f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.iComm)
+			'if commission > 0 then apply commission type of that 
+			f.Intrinsic.Control.If(v.Local.iComm,>,0)
+				'update commission type in ORDER_HIST_LINE
+				f.Intrinsic.String.Build("Update ORDER_HIST_LINE set COMMISSION_TYPE = '{0}' where ORDER_NO = '{1}' and ORDER_LINE = '{2}' and INVOICE = '{3}'",v.Local.sCommType,v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_NO!FieldValTrim, v.DataTable.dtOrdHistLines(v.Local.iCnt).ORDER_LINE!FieldValTrim,v.DataTable.dtOrdHistLines(v.Local.iCnt).INVOICE!FieldValTrim,v.Local.sSQL)
+				f.ODBC.Connection!con.Execute(v.Local.sSQL)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.Next(v.Local.iCnt)
+f.Intrinsic.UI.CloseWaitDialog
+f.Intrinsic.Control.CallSub(run_Report)
+	F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End 
+F.Intrinsic.Control.EndTry
+Program.Sub.cmd_Process_Click.End
+
+Program.Sub.run_Report.Start
+V.Local.sSQL.Declare
+V.Local.iReportID.Declare
+V.Local.iBIRun.Declare
+V.Local.iBILog.Declare
+V.Local.sParams.Declare
+V.Local.sValues.Declare
+V.Local.iRet.Declare
+v.Local.iCnt.Declare
+v.Local.sPart.Declare
+v.Local.sCadID.Declare
+v.Local.dCreation.Declare
+v.Local.iDateDiff.Declare
+v.Local.sRet.Declare
+v.Local.dFrom.Declare
+v.Local.dTo.Declare
+v.Local.sSalesPerson.Declare
+v.Local.iCom.Declare(float)
+v.Local.sCommType.Declare
+'f.Intrinsic.UI.ChangeWaitStatus("Please wait...","Processing report")
+F.Global.BI.GetIDFromName("GCG_Commission_Report.rpt",V.Local.iReportID)
+F.Global.BI.GetRunID(V.Local.iBIRun)
+F.Global.BI.StartLogging(V.Local.iBIRun,V.Local.iReportID,-1,"",V.Local.iBILog)
+
+v.Local.dFrom.Set(v.Screen.F_Date_Order_Hist!dtp_From.Value)
+v.Local.dTo.Set(v.Screen.F_Date_Order_Hist!dtp_To.Value)
+
+'Get Sales Order History Data
+'F.Intrinsic.String.Build("Select SalesPerson, '' as Name_SalesPerson, Customer, '' as Name_Customer, Customer_PO, Part, Qty_Shipped as Qty, Price, Invoice, '' as Invoice_Paid, Extension, cast(0 as Double) as Comm_Rate,COMMISSION_TYPE,DATE_INVOICE as INVOICE_DATE from V_ORDER_HIST_LINE where DATE_INVOICE between '{0}' and '{1}';",v.Local.dFrom.PervasiveDate,v.Local.dTo.PervasiveDate,V.Local.sSQL)
+
+F.Intrinsic.String.Build("Select SalesPerson, '' as Name_SalesPerson, Customer, '' as Name_Customer, Customer_PO, Part, Qty_Shipped as Qty, Price, Invoice, '' as Invoice_Paid, Extension as Temp_Extension, cast(0 as Double) as Comm_Rate,COMMISSION_TYPE,DATE_INVOICE as INVOICE_DATE from V_ORDER_HIST_LINE where INVOICE in (Select INVOICE from V_AR_OPEN_ITEMS where (DATE_TRANSACTION between '{0}' and '{1}') and BATCH_CODE = 11);",v.Local.dFrom.PervasiveDate,v.Local.dTo.PervasiveDate,V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("dtOrderHist","con",V.Local.sSQL)
+'this is gonna be a SLOW SQL. it can be sped up but for the purposes of this temporary report this will do
+F.Data.DataTable.CreateFromSQL("dtInvoices","con","select A.INVOICE, sum(A.INVOICE_TOT) as INVOICE_TOT from (select INVOICE, sum(AMT_INVOICE) as INVOICE_TOT from V_AR_OPEN_ITEMS group by INVOICE union select INVOICE, sum(AMT_INVOICE) as INVOICE_TOT from V_AR_HISTORY group by INVOICE) A group by A.INVOICE")
+F.Data.Dictionary.CreateFromSQL("dCustName","con","Select Customer, Name_Customer from V_CUSTOMER_MASTER;")
+F.Data.Dictionary.CreateFromSQL("dSaleName","con","Select "ID", Name from V_SalesPersons;")
+
+'Fill in Customer and Sales Person Name
+F.Data.Dictionary.SetDefaultReturn("dCustName","")
+F.Data.Dictionary.SetDefaultReturn("dSaleName","")
+F.Data.DataTable.FillFromDictionary("dtOrderHist","dCustName","Customer","Name_Customer")
+F.Data.DataTable.FillFromDictionary("dtOrderHist","dSaleName","SalesPerson","Name_SalesPerson")
+F.Data.Dictionary.Close("dCustName")
+F.Data.Dictionary.Close("dSaleName")
+
+'Check if Invoice is Paid from AR_OPEN_ITEMS and AR_HISTORY
+F.Data.DataTable.AddExpressionColumn("dtInvoices","Invoice_Paid","String","iif(INVOICE_TOT <> 0, 'N', 'Y')")
+F.Data.Dictionary.CreateFromDataTable("dInvoicePaid","dtInvoices","INVOICE","Invoice_Paid")
+F.Data.Dictionary.SetDefaultReturn("dInvoicePaid","N")
+F.Data.DataTable.FillFromDictionary("dtOrderHist","dInvoicePaid","Invoice","Invoice_Paid")
+F.Data.Dictionary.Close("dInvoicePaid")
+F.Data.DataTable.Close("dtInvoices")
+
+'getting commission rates
+'=========================================================================================
+f.Intrinsic.Control.For(v.Local.iCnt,0,v.DataTable.dtOrderHist.RowCount--,1)
+	f.Intrinsic.String.Build("Select COMMISSION_RATE from V_COMMISSION_RATE where SALESPERSON = '{0}' and COMMISSION_TYPE = '{1}'",v.DataTable.dtOrderHist(v.Local.iCnt).SALESPERSON!FieldValTrim,v.DataTable.dtOrderHist(v.Local.iCnt).COMMISSION_TYPE!FieldValTrim,v.Local.sSQL)
+	v.Local.iCom.Set(0)
+	f.ODBC.Connection!con.ExecuteAndReturn(v.Local.sSQL,v.Local.iCom)
+	f.Data.Datatable.SetValue("dtOrderHist",v.Local.iCnt,"Comm_Rate",v.Local.iCom)
+f.Intrinsic.Control.Next(v.Local.iCnt)
+'=========================================================================================
+
+'getting credit memo
+f.Data.Datatable.AddColumn("dtOrderHist","Credit_Memo","Float")
+f.Data.Dictionary.CreateFromSQL("dCreditMemo","con","Select INVOICE, AMT_INVOICE from V_AR_OPEN_ITEMS where BATCH_CODE = 12")
+f.Data.Dictionary.SetDefaultReturn("dCreditMemo",0)
+f.Data.Datatable.FillFromDictionary("dtOrderHist","dCreditMemo","Invoice","Credit_Memo")
+f.Data.Dictionary.Close("dCreditMemo")
+F.Data.DataTable.AddExpressionColumn("dtOrderHist","Final_Extension","Float","Temp_Extension + Credit_Memo")
+
+F.Data.DataTable.AddExpressionColumn("dtOrderHist","Comm_Amt_Float","Float","Final_Extension * Comm_Rate")
+F.Data.DataTable.AddColumn("dtOrderHist","Comm_Amt","Float")
+F.Data.DataTable.SetValueFormat("dtOrderHist",-1,"Comm_Amt_Float","Comm_Amt","0.00")
+F.Data.DataTable.RemoveColumn("dtOrderHist","Comm_Amt_Float")
+F.Data.DataTable.RemoveColumn("dtOrderHist","COMMISSION_TYPE")
+F.Data.DataTable.AddColumn("dtOrderHist","Terminal","String",V.Caller.Terminal)
+F.Data.DataTable.AddColumn("dtOrderHist","Report_ID","String",V.Local.iReportID.String)
+F.Intrinsic.String.Build("delete from GCG_COMM_REPORT where TERMINAL = '{0}'",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+'Function.Data.Datatable.SaveToCSV("dtOrderHist","C:\Users\gsadmin.DEWYSMFG\Desktop\TEST.csv",true)
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+F.Data.DataTable.SaveToDB("dtOrderHist","con","GCG_COMM_REPORT","TERMINAL","128","TERMINAL@!@TERMINAL*!*REPORT_ID@!@REPORT_ID*!*SALESPERSON@!@SALESPERSON*!*NAME_SALESPERSON@!@NAME_SALESPERSON*!*CUSTOMER@!@CUSTOMER*!*NAME_CUSTOMER@!@NAME_CUSTOMER*!*CUSTOMER_PO@!@CUSTOMER_PO*!*PART@!@PART*!*QTY@!@QTY*!*PRICE@!@PRICE*!*INVOICE@!@INVOICE*!*INVOICE_PAID@!@INVOICE_PAID*!*TEMP_EXTENSION@!@TEMP_EXTENSION*!*COMM_RATE@!@COMM_RATE*!*COMM_AMT@!@COMM_AMT*!*INVOICE_DATE@!@INVOICE_DATE*!*FINAL_EXTENSION@!@FINAL_EXTENSION*!*Credit_Memo@!@Credit_Memo")
+F.ODBC.Connection!con.Close
+
+V.Local.sParams.Set("Terminal*!*Report_ID")
+F.Intrinsic.String.Build("{0}*!*{1}",V.Caller.Terminal,V.Local.iReportID.String,V.Local.sValues)
+F.Global.BI.StopLogging(V.Local.iBILog)
+f.Intrinsic.UI.CloseWaitDialog
+F.Global.BI.RunReportPreProcessor(V.Local.iBIRun,V.Local.iBILog,V.Local.sParams,V.Local.sValues,"",16,True,"",0,"",0,"","",V.Local.iRet)
+
+F.Intrinsic.Control.End
+Program.Sub.run_Report.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$bpham$}$20220201153640013$}$Di0riF4Q5RIv6jxva5zSWBaTvp+T0Dt69Zqgnipn0V+j47TYbcYGhza9Md2N8iKLUmnM2HO7sV8=
+Program.Sub.Comments.End
